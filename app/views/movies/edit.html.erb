@@ -33,7 +33,7 @@
           Directors
         </label>
 
-        <input type="text" id="directors_id" name="directors_id" placeholder="Directors" class="form-control" value="<%= @movie.directors_id %>">
+        <%= select_tag(:directors_id, options_from_collection_for_select(Director.all, :id, :name, @movie.directors_id), :class => "form-control") %>
       </div>
 
       <!-- Label and input for image -->
